@@ -48,12 +48,12 @@ app.post("/api/shorturl/new", function (req, res) {
  console.log(urlWithouthttp.indexOf("/"))
     if (urlWithouthttp.indexOf("/") > 0) {
     
-      urlCheck = urlWithouthttp.substring(0, urlWithouthttp.indexOf("/")-1);
+      urlCheck = urlWithouthttp.substring(0, urlWithouthttp.indexOf("/"));
     } else {
       urlCheck = urlWithouthttp;
 
     }
-  console.log(urlCheck)
+
  
   dns.lookup(urlCheck, options, function (err, adresse) {
 
